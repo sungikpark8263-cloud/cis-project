@@ -89,6 +89,84 @@ sources:
             description: Y coordinate in NY State Plane projection system (NAD 83)
           - name: landmark
             description: Nearby landmark or point of interest
+      - name: source_nyc_open_restaurant_apps
+        description:
+          NYC Open Restaurant Applications data.
+          One row per application. 
+        columns:
+          - name: objectid
+            description: Unique row identifier
+            tests:
+              - unique
+              - not_null
+          - name: approved_for_roadway_seating
+            description: Whether roadway seating was approved
+          - name: approved_for_sidewalk_seating
+            description: Whether sidewalk seating was approved
+          - name: bbl
+            description: Borough block and lot identifier
+          - name: bin
+            description: Building identification number
+          - name: borough
+            description: Borough where the restaurant is located
+          - name: building_number
+            description: Building number
+          - name: business_address
+            description: Full business address
+          - name: census_tract
+            description: Census tract
+          - name: community_board
+            description: Community board district
+          - name: council_district
+            description: Council district
+          - name: doing_business_as_dba
+            description: Doing business as name
+          - name: food_service_establishment
+            description: Food service establishment name
+          - name: globalid
+            description: Global identifier
+          - name: healthcompliance_terms
+            description: Health compliance terms accepted
+          - name: landmark_district_or_building
+            description: Landmark district or building indicator
+          - name: landmarkdistrict_terms
+            description: Landmark district terms accepted
+          - name: latitude
+            description: Latitude coordinate
+          - name: legal_business_name
+            description: Legal business name
+          - name: longitude
+            description: Longitude coordinate
+          - name: nta
+            description: Neighborhood Tabulation Area
+          - name: qualify_alcohol
+            description: Alcohol qualification indicator
+          - name: restaurant_name
+            description: Restaurant name
+          - name: roadway_dimensions_area
+            description: Roadway seating area
+          - name: roadway_dimensions_length
+            description: Roadway seating length
+          - name: roadway_dimensions_width
+            description: Roadway seating width
+          - name: seating_interest_sidewalk
+            description: Seating interest type
+          - name: sidewalk_dimensions_area
+            description: Sidewalk seating area
+          - name: sidewalk_dimensions_length
+            description: Sidewalk seating length
+          - name: sidewalk_dimensions_width
+            description: Sidewalk seating width
+          - name: sla_license_type
+            description: SLA license type
+          - name: sla_serial_number
+            description: SLA serial number
+          - name: street
+            description: Street name
+          - name: time_of_submission
+            description: Submission timestamp
+          - name: zip
+            description: Zip code
 
 
 
