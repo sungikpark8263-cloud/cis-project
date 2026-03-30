@@ -116,7 +116,7 @@ cleaned AS (
                 AND REGEXP_CONTAINS(CAST(zip AS STRING), r'^\d{5}-\d{4}')
             THEN CAST(zip AS STRING)
             ELSE NULL
-        END AS zip,
+        END AS zip_code,
 
        -- Metadata
         CURRENT_TIMESTAMP() AS _stg_loaded_at
