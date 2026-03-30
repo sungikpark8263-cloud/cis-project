@@ -13,10 +13,8 @@ cleaned AS (
             objectid,
             approved_for_roadway_seating,
             approved_for_sidewalk_seating,
-            bbl,
-            bin,
             borough,
-            building_number,
+            bulding_number,
             business_address,
             census_tract,
             community_board,
@@ -64,8 +62,8 @@ cleaned AS (
         END AS approved_for_sidewalk_seating,
 
         -- Location / identifiers
-        CAST(bbl AS STRING) AS bbl,
-        CAST(bin AS STRING) AS bin,
+    
+        
         CASE
             WHEN UPPER(TRIM(CAST(borough AS STRING))) IN ('MANHATTAN', 'NEW YORK COUNTY') THEN 'Manhattan'
             WHEN UPPER(TRIM(CAST(borough AS STRING))) IN ('BRONX', 'THE BRONX') THEN 'Bronx'
@@ -74,7 +72,7 @@ cleaned AS (
             WHEN UPPER(TRIM(CAST(borough AS STRING))) IN ('STATEN ISLAND', 'RICHMOND COUNTY') THEN 'Staten Island'
             ELSE 'UNKNOWN'
         END AS borough,
-        CAST(building_number AS STRING) AS building_number,
+        CAST(bulding_number AS STRING) AS building_number,
         CAST(business_address AS STRING) AS business_address,
         CAST(census_tract AS STRING) AS census_tract,
         CAST(community_board AS STRING) AS community_board,
